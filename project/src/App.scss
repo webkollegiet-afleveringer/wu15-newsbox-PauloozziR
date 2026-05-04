@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+}
+.invisible {
+  display: none;
+}
+.visible {
+  display: flex;
+}
+.news-header {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid gray;
+}
+.news-chevron {
+  margin-left: 60vw;
+}
+li {
+  padding: 1rem;
+  border-bottom: 1px solid gray;
+}
