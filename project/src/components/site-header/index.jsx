@@ -6,7 +6,7 @@ export default function SiteHeader() {
     return (
         <div className="site-header">
             <SiteLogo />
-            <h1>Newsify</h1>
+            <h1 id="site-heading">Newsify</h1>
         </div>
     )
 }
