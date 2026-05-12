@@ -22,7 +22,7 @@ export default function Settings() {
         toggleRef.current.classList.add(localStorage.getItem("theme"));
     }
     useEffect(() => {
-        toggleRef.current.classList.add(localStorage.getItem("theme"));
+        localStorage.getItem("theme") && toggleRef.current.classList.add(localStorage.getItem("theme"));
     }, []);
 
     return (
