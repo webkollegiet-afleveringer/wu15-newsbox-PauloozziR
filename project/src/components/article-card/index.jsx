@@ -1,6 +1,6 @@
 import Bookmark from "../../assets/images/svgs/bookmarkIcon";
 import "./article-card.scss";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 export default function ArticleCard({ article }) {
     const articleRef = useRef();

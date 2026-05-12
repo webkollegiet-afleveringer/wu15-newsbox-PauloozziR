@@ -1,13 +1,8 @@
-/* import { useSearchParams } from "react-router";
-import { useContext } from "react";
-import { searchContext } from "../contexts/search-context"; */
 import { useQuery } from '@tanstack/react-query';
 import useCachedQuery from '../hooks/useCachedQuery';
 import Detail from '../components/detail';
 
 export default function Home() {
-    /* const { keyword, setKeyword } = useContext(searchContext);
-    const [searchParams, setSearchParams] = useSearchParams(); */
     const showEurope = localStorage.getItem("europe") || "true";
     const showHealth = localStorage.getItem("health") || "true";
     const showSports = localStorage.getItem("sports") || "true";

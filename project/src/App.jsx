@@ -7,7 +7,6 @@ import Settings from "./views/settings";
 import SearchProvider from './contexts/search-context';
 import Layout from './components/layout';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { useContext } from 'react';
 
 function App() {
   const queryClient = new QueryClient();
