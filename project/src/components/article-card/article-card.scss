@@ -1,0 +1,41 @@
+.articleCard {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid gray;
+    background-color: #fff;
+
+    &__heading {
+        font-size: 1em;
+        height: 1.5em;
+        line-clamp: 1;
+        overflow: hidden;
+    }
+    /* &__heading::after {
+        content: "...";
+    } */
+    
+    &__text {
+        font-size: 0.9em;
+        height: 2.5em;
+        line-clamp: 2;
+        overflow: hidden;
+    }
+    /* &__text::after {
+        content: "...";
+    } */
+}
+.articleCard img {
+  border-radius: 8%;
+}
+.archive-box {
+    color: #fff;
+    background-color: #46781B;
+    position: absolute;
+    right: -25vw;
+    width: 25vw;
+    padding-top: 2.6rem;
+    padding-bottom: 2.6rem;
+    text-align: center;
+    align-self: center;
+}

@@ -1,11 +1,11 @@
-import SiteLogo from "../../assets/images/newsify-logo.svg";
+import SiteLogo from "../../assets/images/svgs/newsifyLogo";
 import "./site-header.scss"
 
 export default function SiteHeader() {
     
     return (
         <div className="site-header">
-            <img src={SiteLogo} alt="Newsify logo" />
+            <SiteLogo />
             <h1>Newsify</h1>
         </div>
     )

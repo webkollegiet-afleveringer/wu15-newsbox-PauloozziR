@@ -1,4 +1,4 @@
-.site-menu {
+.siteMenu {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,7 +6,12 @@
   gap: 3rem;
   padding: 2rem;
   margin-bottom: 3rem;
-}
-.menu-link {
-  text-decoration: none;
+
+  &__link {
+    color: #404040;
+
+    &--active {
+      color: #4D861F;
+    }
+  }
 }

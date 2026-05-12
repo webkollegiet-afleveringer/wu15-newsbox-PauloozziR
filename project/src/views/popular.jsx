@@ -6,8 +6,7 @@ export default function Popular() {
 
     return (
         <>
-            <SiteHeader />
-            <SiteMenu />
+        
         </>
     )
 }

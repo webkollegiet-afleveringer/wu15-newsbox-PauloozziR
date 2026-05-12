@@ -1,33 +1,30 @@
-import { Link } from "react-router";
-import HomeIcon from "../../assets/images/home.svg";
-import ArchiveIcon from "../../assets/images/bookmark.svg";
-import PopularIcon from "../../assets/images/star.svg";
-import SettingsIcon from "../../assets/images/settings.svg";
-import "./site-menu.scss";
+import { NavLink } from "react-router";
+import "./site-menu.scss"
+import HomeIcon from "../../assets/images/svgs/homeIcon";
+import BookmarkIcon from "../../assets/images/svgs/bookmarkIcon";
+import StarIcon from "../../assets/images/svgs/starIcon";
+import SettingsIcon from "../../assets/images/svgs/settingsIcon";
 
 export default function SiteMenu() {
 
-
     return (
-        <>
-            <div className="site-menu">
-                <Link className="menu-link" to={"/"}>
-                    <img src={HomeIcon} alt="Home icon" />
-                    <h4>Home</h4>
-                </Link>
-                <Link className="menu-link" to={"/archive"}>
-                    <img src={ArchiveIcon} alt="Archive icon" />
-                    <h4>Archive</h4>
-                </Link>
-                <Link className="menu-link" to={"/popular"}>
-                    <img src={PopularIcon} alt="Popular icon" />
-                    <h4>Popular</h4>
-                </Link>
-                <Link className="menu-link" to={"/settings"}>
-                    <img src={SettingsIcon} alt="Settings icon" />
-                    <h4>Settings</h4>
-                </Link>
-            </div>
-        </>
+        <nav className="siteMenu">
+            <NavLink to="/" className={({isActive}) => isActive ? "siteMenu__link--active" : "siteMenu__link"}>
+                <HomeIcon />
+                <h4>Home</h4>
+            </NavLink>
+            <NavLink to="/archive" className={({isActive}) => isActive ? "siteMenu__link--active" : "siteMenu__link"}>
+                <BookmarkIcon />
+                <h4>Archive</h4>
+            </NavLink>
+            <NavLink to="/popular" className={({isActive}) => isActive ? "siteMenu__link--active" : "siteMenu__link"}>
+                <StarIcon />
+                <h4>Popular</h4>
+            </NavLink>
+            <NavLink to="/settings" className={({isActive}) => isActive ? "siteMenu__link--active" : "siteMenu__link"}>
+                <SettingsIcon />
+                <h4>Settings</h4>
+            </NavLink>
+        </nav>
     )
 }

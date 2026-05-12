@@ -5,20 +5,28 @@ import Archive from "./views/archive";
 import Popular from "./views/popular";
 import Settings from "./views/settings";
 import SearchProvider from './contexts/search-context';
+import Layout from './components/layout';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { useContext } from 'react';
 
 function App() {
+  const queryClient = new QueryClient();
 
   return (
-    <SearchProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/archive" element={<Archive />}></Route>
-          <Route path="/popular" element={<Popular />}></Route>
-          <Route path="/settings" element={<Settings />}></Route>
-        </Routes>
-      </BrowserRouter>
-    </SearchProvider>
+    <QueryClientProvider client={queryClient}>
+      <SearchProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route element={<Layout />}>
+              <Route path="/" element={<Home />} />
+              <Route path="/archive" element={<Archive />} />
+              <Route path="/popular" element={<Popular />} />
+              <Route path="/settings" element={<Settings />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </SearchProvider>
+    </QueryClientProvider>
   )
 }
 
