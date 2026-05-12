@@ -8,7 +8,7 @@ export default function Layout() {
     let location = useLocation();
     
     useEffect(() => {
-        document.getElementById("root").classList.add(localStorage.getItem("theme"));
+        document.body.classList.add(localStorage.getItem("theme"));
         document.getElementById("site-heading").classList.add(localStorage.getItem("theme"));
     }, []);
 

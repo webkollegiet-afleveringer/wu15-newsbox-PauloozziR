@@ -15,7 +15,8 @@ export default function ArticleCard({ article }) {
             const distance = diff - event.changedTouches[0].screenX;
             articleRef.current.style.transform = `translateX(-${distance}px)`;
             bookmarkRef.current.classList.remove("invisible");
-            /* localStorage.setItem("archivedArticles", JSON.stringify(articleRef.current)); */
+            /* let articleString = JSON.stringify(articleRef.current);
+            localStorage.setItem("archivedArticles", articleString); */
         }
     }
 

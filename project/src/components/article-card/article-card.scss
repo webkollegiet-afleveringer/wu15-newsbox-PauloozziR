@@ -1,13 +1,12 @@
 .articleCard {
     display: flex;
     gap: 1rem;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     border-bottom: 1px solid gray;
-    background-color: #fff;
 
     &__heading {
         font-size: 1em;
-        height: 1.5em;
+        height: 1.6em;
         line-clamp: 1;
         overflow: hidden;
     }
@@ -17,7 +16,7 @@
     
     &__text {
         font-size: 0.9em;
-        height: 2.5em;
+        height: 2.8em;
         line-clamp: 2;
         overflow: hidden;
     }

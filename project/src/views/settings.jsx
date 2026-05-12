@@ -7,17 +7,17 @@ export default function Settings() {
     const toggleRef = useRef();
     const toggleTheme = () => {
         if (localStorage.getItem("theme") === "light") {
-            document.getElementById("root").classList.remove("light");
+            document.body.classList.remove("light");
             document.getElementById("site-heading").classList.remove("light");
             toggleRef.current.classList.remove("light");
             localStorage.setItem("theme", "dark");
         } else {
-            document.getElementById("root").classList.remove("dark");
+            document.body.classList.remove("dark");
             document.getElementById("site-heading").classList.remove("dark");
             toggleRef.current.classList.remove("dark");
             localStorage.setItem("theme", "light");
         }
-        document.getElementById("root").classList.add(localStorage.getItem("theme"));
+        document.body.classList.add(localStorage.getItem("theme"));
         document.getElementById("site-heading").classList.add(localStorage.getItem("theme"));
         toggleRef.current.classList.add(localStorage.getItem("theme"));
     }
