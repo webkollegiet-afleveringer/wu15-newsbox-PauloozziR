@@ -1,0 +1,21 @@
+.category-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+
+  &__summary {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__content {
+    height: 0;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+    position: relative;
+  }
+}
